@@ -61,7 +61,7 @@ time.sleep(5)
 
 driver.execute_script("window.scrollBy(0,document.body.scrollHeight)")
 
-time.sleep(5)First 
+time.sleep(5)
 
 WebDriverWait(driver, 20).until(EC.presence_of_all_elements_located((By.XPATH, "/html/body/div[5]/div[3]/div/div/div/div/div[2]/div/div/main/section/div[2]/section/ul/li/div[1]/child::div[@class='invitation-card__action-container pl3']/child::button[contains(@aria-label, 'Accept')]")))
 
