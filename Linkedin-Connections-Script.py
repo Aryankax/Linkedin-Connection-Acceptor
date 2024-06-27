@@ -5,6 +5,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+email = input("Enter your email: \n")
+password = input("Enter your password: \n")
+
 driver = webdriver.Chrome()
 
 driver.implicitly_wait(10)
@@ -17,13 +20,13 @@ email_input = WebDriverWait(driver, 10).until(
     EC.presence_of_element_located((By.XPATH, "//*[@id='username']"))
 )
 
-email_input.send_keys("kackeraryan@gmail.com")
+email_input.send_keys(email)
 
 password_input = WebDriverWait(driver, 10).until(
     EC.presence_of_element_located((By.XPATH, "//*[@id='password']"))
 )
 
-password_input.send_keys("chps2823")
+password_input.send_keys(password)
 
 submit_btn = WebDriverWait(driver, 10).until(
     EC.element_to_be_clickable((By.XPATH, "//*[@id='organic-div']/form/div[3]/button"))
