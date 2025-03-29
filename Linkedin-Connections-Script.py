@@ -42,7 +42,7 @@ print(title)
 
 time.sleep(2)
 
-network = driver.find_element(By.XPATH, "/html/body/div[5]/header/div/nav/ul/li[2]/a")
+network = driver.find_element(By.XPATH, "/html[1]/body[1]/div[5]/header[1]/div[1]/nav[1]/ul[1]/li[2]/a[1]/div[1]/div[1]/li-icon[1]/*[name()='svg'][1]/*[name()='path'][1]")
 
 network.click()
 
